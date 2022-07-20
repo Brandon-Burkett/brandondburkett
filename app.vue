@@ -21,6 +21,9 @@ useHead({
 
 <template>
   <div>
-    <NuxtWelcome />
+    <NuxtPage />
   </div>
 </template>
+
+<style lang="scss">
+</style>
