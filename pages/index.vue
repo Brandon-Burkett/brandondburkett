@@ -16,6 +16,8 @@ import TheShowcase from "~~/components/TheShowcase.vue";
       <TheShowcase />
 
       <TheContact />
+
+      <TheSocialIcons />
     </main>
 
     <footer>
