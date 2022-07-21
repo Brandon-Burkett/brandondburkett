@@ -1,5 +1,7 @@
 <template>
-  <div>Footer</div>
+  <div class="footer-container">
+    Made by Brandon Burkett &copy; 2022
+  </div>
 </template>
 
 <script>
