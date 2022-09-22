@@ -8,4 +8,10 @@
 </script>
 
 <style scoped lang="scss">
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0;
+}
 </style>

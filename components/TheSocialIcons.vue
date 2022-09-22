@@ -30,4 +30,49 @@
 </script>
 
 <style scoped lang="scss">
+.social-container {
+  padding: 5rem 0rem 0rem;
+}
+.social-icon-list {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5em 0;
+}
+.social-icon-item {
+  padding: 0 1em 0 1em;
+  filter: var(--primary-svg-color-filter);
+}
+.social-icon-item:hover {
+  cursor: pointer;
+  filter: var(--accent-svg-color-filter);
+}
+
+// @media screen and (min-width: 768px) {
+//   .social-icon-list {
+//     position: fixed;
+//     flex-direction: column;
+//     height: 40%;
+//     bottom: 0;
+//     left: 4em;
+//     margin: 0;
+//   }
+//   .social-icon-item:last-child {
+//     position: relative;
+//   }
+//   .social-icon-list::after {
+//     content: "";
+//     position: absolute;
+//     top: 100%;
+//     height: 10000%;
+//     width: 0.25em;
+//     left: 50%;
+//     margin-left: -0.125em;
+//     background-color: var(--primary-text-color);
+//   }
+//   .social-icon-item {
+//     padding: 0 0 1em 0;
+//   }
+// }
 </style>
