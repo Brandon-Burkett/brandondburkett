@@ -15,7 +15,7 @@
       >
         <ul class="nav-list">
           <li class="nav-list-item"><a href="#about">about</a></li>
-          <li class="nav-list-item"><a href="#showcase">work</a></li>
+          <li class="nav-list-item"><a href="#projects">projects</a></li>
           <li class="nav-list-item"><a href="#contact">contact</a></li>
         </ul>
         <a
@@ -141,8 +141,29 @@ function toggleNav() {
 }
 .nav-list-item a {
   display: inline-block;
-  padding: 0.5em 1em;
+  position: relative;
+  margin: 0.5em 1em;
+
   font-size: 1.2rem;
+}
+
+/* Fade in */
+.nav-list-item a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: var(--accent-text-color);
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+
+.nav-list-item a:hover::after,
+.nav-list-item a:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
 }
 .nav-resume {
   display: inline-block;
@@ -156,6 +177,12 @@ function toggleNav() {
   box-shadow: none;
   transform: translateY(-100%);
 }
+.button-outline {
+  color: var(--primary-text-color);
+  padding: 0.25em 1.2em;
+  // border: var(--primary-text-color) solid 1px;
+}
+
 @media screen and (min-width: 35em) {
   .header-container {
     padding: 0em 3em;
@@ -187,9 +214,11 @@ function toggleNav() {
     min-height: 100vh;
     background: white;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: min(20vh, 10rem) 2em;
-    align-items: flex-start;
 
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 4px;
     transform: translateX(100%);
     transition: transform 0.2s ease-in-out;
     display: none;

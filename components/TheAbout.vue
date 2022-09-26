@@ -9,19 +9,25 @@
           >
           <h2>About Me</h2>
         </div>
-        <div class="flex">
-          <img
+        <!-- <div class="flex"> -->
+        <!-- <img
             src="@/assets/images/portrait.jpg"
             alt="portrait"
             class="about-portrait"
-          >
-          <div class="about-text">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora maiores dolorem eaque, repellat exercitationem voluptas in harum odio tempore fugit laboriosam voluptatem necessitatibus accusamus laudantium autem provident doloribus ipsam repellendus!</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora maiores dolorem eaque, repellat exercitationem voluptas in harum odio tempore fugit laboriosam voluptatem necessitatibus accusamus laudantium autem provident doloribus ipsam repellendus!</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora maiores dolorem eaque, repellat exercitationem voluptas in harum odio tempore fugit laboriosam voluptatem necessitatibus accusamus laudantium autem provident doloribus ipsam repellendus!</p>
-          </div>
+          > -->
+        <div class="about-text">
+          <p>In elementary school, teachers often ask children what they wish to be when they grow up. While many kids excitedly claim ‘doctor’, ‘fighter pilot’, or ‘ketchup bottle’, as early as the 4th grade, I knew I wanted to be a computer programmer. Most individuals end up straying from their initial goals of being an astronaut or a vet, but I have always felt a deep sense of passion about building software that makes a difference in peoples lives. </p>
+
+          <p>I am originally from the greater Philadelphia area and am currently a Computer Science and Engineering major at Bucknell University. With my graduation on the horizon in May of 2023, I will be the first member of my family to earn a college degree. </p>
+
+          <p>While on campus, I have helped start a living, learning community called Bed n’ Breakfast for students who share a love of cooking and baking. I have made the engineering building my home and dedicated 5 semesters to being a TA for Data Structures and Algorithms, Software Engineering and Design, and Operating Systems Design. Additionally, I have spent a lot of time at the Hillel House as I’ve participated in multiple semesters of Bucknell’s Jewish Learning Fellowship and I love to explore the Lewisburg area. </p>
+
+          <p>In my free time, I can be found at my computer (duh), eating copious amounts of Chipotle, playing sports with my (not so) little brother, and counting down the days between Apple events. </p>
+
+          <p>While my definition of developing solutions has changed over time from Legos and Lincoln Logs to lines of code, I’ve stayed true to my mission of engineering solutions that improve peoples lives.</p>
         </div>
       </div>
+      <!-- </div> -->
     </div>
   </section>
 </template>
@@ -78,7 +84,7 @@
   .about-main {
   }
   .about-text {
-    max-width: 60ch;
+    // max-width: 60ch;
     padding: 0 2rem 0 0;
   }
   .about-portrait {

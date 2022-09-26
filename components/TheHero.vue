@@ -13,17 +13,17 @@
         </div>
         <div class="hero-description">
           <p>I’m a senior Computer Science & Engineering student at Bucknell University. I’m passionate about building software that makes a difference.</p>
-          <p>I'm currently looking for full-time positions after my graduation in Spring of 2023.</p>
+          <p>I'm currently looking for full-time positions after my graduation in spring of 2023.</p>
         </div>
         <div class="hero-links">
-          <a
+          <!-- <a
             href="/resume.pdf"
             class="hero-link button-outline"
             target="_blank"
           ><img
               src="@/assets/icons/file.svg"
               alt=""
-            >Resume</a>
+            >resume</a> -->
           <a
             href="/resume.pdf"
             class="hero-link button-fill"
@@ -31,7 +31,7 @@
           ><img
               src="@/assets/icons/file.svg"
               alt=""
-            >Resume</a>
+            >View Resume</a>
         </div>
       </div>
     </div>
@@ -88,9 +88,9 @@
   .button-outline img {
     filter: var(--primary-svg-color-filter);
   }
-  .button-outline:hover img {
-    filter: var(--accent-svg-color-filter);
-  }
+  // .button-outline:hover img {
+  //   filter: var(--accent-svg-color-filter);
+  // }
 }
 
 .hero-link {

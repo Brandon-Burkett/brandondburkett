@@ -16,7 +16,7 @@
             alt=""
           ></a></li>
       <li class="social-icon-item"><a
-          href="mailto:brandonburkett01@gmail.com"
+          href="mailto:brandondburkett@gmail.com"
           target="_blank"
         ><img
             src="@/assets/icons/mail.svg"
