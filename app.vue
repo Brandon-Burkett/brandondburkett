@@ -16,6 +16,7 @@ useHead({
       content: "Brandon Burkett",
     },
   ],
+  link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
 });
 </script>
 

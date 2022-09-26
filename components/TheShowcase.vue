@@ -33,7 +33,7 @@
                 target="_blank"
               >
                 <img
-                  :src="`../assets/icons/` + project.links[0].icon"
+                  src="@/assets/icons/github.svg"
                   alt=""
                 >
                 {{ project.links[0].text }}
@@ -45,7 +45,7 @@
                 target="_blank"
               >
                 <img
-                  :src="`../assets/icons/` + project.links[1].icon"
+                  src="@/assets/icons/external-link.svg"
                   alt=""
                 >
                 {{ project.links[1].text }}
