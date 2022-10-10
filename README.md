@@ -1,42 +1,23 @@
-# Nuxt 3 Minimal Starter
+# brandondburkett.com
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+A portfolio website to showcase personal projects, experiences, and skills.
 
-## Setup
+<img src="assets/images/landing.png" alt="landing page" width="400"/>
 
-Make sure to install the dependencies:
+## Installation
 
-```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install --shamefully-hoist
-```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
+1. Clone the repository
+2. Install dependencies with `npm install`
+3. Run the development server on http://localhost:3000 with `npm run dev`
+4. Build the project with `npm run build`
+5. Preview the production build with `npm run preview`
 
 Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## Inspiration
+
+- [Brittany Chiang](https://brittanychiang.com/)
