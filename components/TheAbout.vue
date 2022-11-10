@@ -10,7 +10,7 @@
           <h2>About Me</h2>
         </div> -->
         <SectionHeader
-          icon="../assets/icons/book.svg"
+          :icon="imgSrc"
           title="About Me"
           alt="book icon"
         />
@@ -38,7 +38,13 @@
   </section>
 </template>
 
-<script>
+<script setup>
+import { computed } from "vue";
+import icon from "../assets/icons/book.svg";
+
+const imgSrc = computed(() => {
+  return icon;
+});
 </script>
 
 <style scoped lang="scss">

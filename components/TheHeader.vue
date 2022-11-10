@@ -8,7 +8,10 @@
         href="/"
         class="logo"
       >Brandon Burkett</a>
-      <button class="nav-toggle"></button>
+      <button
+        class="nav-toggle"
+        aria-label="navigation"
+      ></button>
       <div
         class="nav-links"
         data-visible="false"

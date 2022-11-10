@@ -10,7 +10,7 @@
           <h2>Contact</h2>
         </div> -->
         <SectionHeader
-          icon="../assets/icons/mail.svg"
+          :icon="imgSrc"
           title="Contact"
           alt="mail icon"
         />
@@ -28,7 +28,13 @@
   </section>
 </template>
 
-<script>
+<script setup>
+import { computed } from "vue";
+import icon from "../assets/icons/mail.svg";
+
+const imgSrc = computed(() => {
+  return icon;
+});
 </script>
 
 <style scoped lang="scss">

@@ -10,7 +10,7 @@
           <h2>Projects</h2>
         </div> -->
         <SectionHeader
-          icon="../assets/icons/archive.svg"
+          :icon="imgSrc"
           title="Projects"
           alt="archive icon"
         />
@@ -69,6 +69,13 @@
 </template>
 
 <script setup>
+import { computed } from "vue";
+import icon from "../assets/icons/book.svg";
+
+const imgSrc = computed(() => {
+  return icon;
+});
+
 const projects = ref([
   {
     title: "Personal Website",
