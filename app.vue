@@ -16,6 +16,9 @@ useHead({
       content: "Brandon Burkett",
     },
   ],
+  htmlAttrs: {
+    lang: "en",
+  },
   link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
 });
 </script>
@@ -151,10 +154,6 @@ p {
 html {
   scroll-behavior: smooth;
 }
-.main-container {
-  // padding: 0 1rem;
-  // margin: 0 1.5rem;
-}
 
 .button-fill,
 .button-outline {
@@ -165,50 +164,82 @@ html {
   box-shadow: rgba(0, 0, 0, 0.35) 1px 1px 3px;
   border: 2px solid var(--accent-text-color);
   transition: all 0.2s ease-in-out;
+
+  &::after {
+    content: "";
+    border-radius: 0.25em;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 0.2rem var(--accent-text-color),
+      0 0 0.7rem var(--accent-text-color);
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  &:hover::after {
+    opacity: 1;
+  }
 }
 
-.button-fill::after,
-.button-outline::after {
-  content: "";
-  border-radius: 0.25em;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  box-shadow: inset 0 0 0.2rem var(--accent-text-color),
-    0 0 0.7rem var(--accent-text-color);
-  opacity: 0;
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
+// .button-fill::after,
+// .button-outline::after {
+//   content: "";
+//   border-radius: 0.25em;
+//   position: absolute;
+//   z-index: -1;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   box-shadow: inset 0 0 0.2rem var(--accent-text-color),
+//     0 0 0.7rem var(--accent-text-color);
+//   opacity: 0;
+//   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+// }
 
 .button-fill {
   background-color: var(--accent-text-color);
   color: var(--primary-bg-color);
+  img {
+    filter: var(--white-svg-color-filter);
+  }
+  &:hover,
+  &:focus {
+    background-color: var(--accent-text-color-dark);
+  }
 }
-.button-fill:hover,
-.button-fill:focus {
-  background-color: var(--accent-text-color-dark);
-}
+// .button-fill:hover,
+// .button-fill:focus {
+//   background-color: var(--accent-text-color-dark);
+// }
 
 .button-outline {
   color: var(--primary-text-color);
+  img {
+    filter: var(--primary-svg-color-filter);
+  }
+  &:hover,
+  &:focus {
+    background-color: var(--accent-text-color-lightest);
+  }
 }
-.button-outline:hover,
-.button-outline:focus {
-  background-color: var(--accent-text-color-lightest);
-}
+// .button-outline:hover,
+// .button-outline:focus {
+//   background-color: var(--accent-text-color-lightest);
+// }
 
-.button-fill:hover::after,
-.button-outline:hover::after {
-  opacity: 1;
-}
+// .button-fill:hover::after,
+// .button-outline:hover::after {
+//   opacity: 1;
+// }
+
+/* ----- Responsive Padding/Width ----- */
+
 .main-container {
-  // padding: 0 clamp(1rem, 2vw, 2rem);
-  // width: clamp(20rem, 55vw, 50rem);
   padding: 0 1rem;
-  // width: clamp(18rem, 20rem + 10vw, 50rem);
   margin: 0 auto;
 }
 
@@ -253,51 +284,4 @@ html {
     width: clamp(18rem, 20rem + 40vw, 50rem);
   }
 }
-// section {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-// }
-
-// @media screen and (min-width: 25rem) and (max-width: 30rem) {
-//   .main-container {
-//     // margin: 0 1.5rem;
-
-//   }
-// }
-
-// @media screen and (min-width: 30rem) and (max-width: 40rem) {
-//   body {
-//     // font-size: 1.1rem;
-//   }
-//   .main-container {
-//     // margin: 0 15vw;
-//   }
-// }
-// @media screen and (min-width: 40rem) and (max-width: 50rem) {
-//   body {
-//     // font-size: 1.2rem;
-//   }
-//   .main-container {
-//     // margin: 0 17.5vw;
-//   }
-// }
-// @media screen and (min-width: 50rem) and (max-width: 60rem) {
-//   body {
-//     // font-size: 1.4rem;
-//   }
-//   .main-container {
-//     // margin: 0 20vw;
-//   }
-// }
-// @media screen and (min-width: 60rem) {
-//   body {
-//     // font-size: 1.5rem;
-//   }
-//   .main-container {
-//     // margin: 0 22.5vw;
-//     max-width: 50rem;
-//   }
-// }
 </style>

@@ -60,22 +60,6 @@ export default {
 
 
 <script setup>
-// var showNavbar = ref(false);
-// var lastScrollPosition = ref(0);
-
-// function onScroll() {
-//   // Get the current scroll position
-//   const currentScrollPosition =
-//     window.pageYOffset || document.documentElement.scrollTop;
-//   // Because of momentum scrolling on mobiles, we shouldn't continue if it is less than zero
-//   if (currentScrollPosition < 0) {
-//     return;
-//   }
-//   // Here we determine whether we need to show or hide the navbar
-//   this.showNavbar = currentScrollPosition < this.lastScrollPosition;
-//   // Set the current scroll position as the last scroll position
-//   this.lastScrollPosition = currentScrollPosition;
-// }
 onMounted(function () {
   window.addEventListener("click", function () {
     console.log(window.event.target);
@@ -98,10 +82,12 @@ function toggleNav() {
   if (navVisibility === "false") {
     nav.setAttribute("data-visible", "true");
     toggleButton.setAttribute("aria-expanded", "true");
+    toggleButton.setAttribute("aria-label", "close navigation");
     body.classList.add("scroll-lock");
   } else {
     nav.setAttribute("data-visible", "false");
     toggleButton.setAttribute("aria-expanded", "false");
+    toggleButton.setAttribute("aria-label", "open navigation");
     body.classList.remove("scroll-lock");
   }
 }

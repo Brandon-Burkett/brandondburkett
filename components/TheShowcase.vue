@@ -2,13 +2,18 @@
   <section id="projects">
     <div class="main-container">
       <div class="showcase-main">
-        <div class="section-header">
+        <!-- <div class="section-header">
           <img
             src="@/assets/icons/archive.svg"
             alt=""
           >
           <h2>Projects</h2>
-        </div>
+        </div> -->
+        <SectionHeader
+          icon="../assets/icons/archive.svg"
+          title="Projects"
+          alt="archive icon"
+        />
 
         <div class="showcase-list">
           <div
@@ -27,26 +32,30 @@
             </ul>
             <div class="showcase-list-item-links">
               <a
-                :class="{disabled: project.links[0].href === ''}"
+                :tabindex="project.links[0].href === '' ? -1 : 0"
+                :class="{disabled: !project.links[0].hasOwnProperty('href')}"
+                :aria-disabled="!project.links[0].hasOwnProperty('href')"
                 :href="project.links[0].href"
                 class="showcase-list-item-link left-link"
                 target="_blank"
               >
                 <img
                   src="@/assets/icons/github.svg"
-                  alt=""
+                  alt="github icon"
                 >
                 {{ project.links[0].text }}
               </a>
               <a
-                :class="{disabled: project.links[1].href === ''}"
+                :tabindex="project.links[1].href === '' ? -1 : 0"
+                :class="{disabled: !project.links[1].hasOwnProperty('href')}"
+                :aria-disabled="!project.links[1].hasOwnProperty('href')"
                 :href="project.links[1].href"
                 class="showcase-list-item-link right-link"
                 target="_blank"
               >
                 <img
                   src="@/assets/icons/external-link.svg"
-                  alt=""
+                  alt="external link icon"
                 >
                 {{ project.links[1].text }}
               </a>
@@ -65,7 +74,7 @@ const projects = ref([
     title: "Personal Website",
     subtitle: "Project Portfolio",
     description:
-      "The website you're veiwing right now! This is my personal portfolio website to showcase my projects and skills. Designed using Figma, built using Nuxt.js, and deployed using AWS Amplify.",
+      "The website you're viewing right now! This is my personal portfolio website to showcase my projects and skills. Designed using Figma, built using Nuxt.js, and deployed using AWS Amplify.",
     tech: ["Nuxt.js", "Vue.js", "HTML", "CSS", "Javascript", "AWS Amplify"],
     links: [
       {
@@ -113,13 +122,11 @@ const projects = ref([
       {
         icon: "github.svg",
         text: "Github",
-        href: "",
         target: "_blank",
       },
       {
         icon: "external-link.svg",
         text: "Check it out!",
-        href: "",
         target: "_blank",
       },
     ],
@@ -140,7 +147,6 @@ const projects = ref([
       {
         icon: "external-link.svg",
         text: "Check it out!",
-        href: "",
         target: "_blank",
       },
     ],
@@ -161,7 +167,6 @@ const projects = ref([
       {
         icon: "external-link.svg",
         text: "Check it out!",
-        href: "",
         target: "_blank",
       },
     ],
@@ -173,30 +178,30 @@ const projects = ref([
 .showcase-main {
   padding: 1em 0em;
 }
-.section-header {
-  margin-bottom: 2em;
-  display: flex;
-  align-items: center;
-  img {
-    float: left;
-    width: 3em;
-    height: 2em;
-    filter: var(--accent-svg-color-filter);
-  }
-  h2 {
-    position: relative;
-    float: right;
-  }
-  h2::after {
-    content: "";
-    position: absolute;
-    bottom: 0em;
-    left: 0;
-    height: 4px;
-    width: 3em;
-    background-color: var(--accent-text-color);
-  }
-}
+// .section-header {
+//   margin-bottom: 2em;
+//   display: flex;
+//   align-items: center;
+//   img {
+//     float: left;
+//     width: 3em;
+//     height: 2em;
+//     filter: var(--accent-svg-color-filter);
+//   }
+//   h2 {
+//     position: relative;
+//     float: right;
+//   }
+//   h2::after {
+//     content: "";
+//     position: absolute;
+//     bottom: 0em;
+//     left: 0;
+//     height: 4px;
+//     width: 3em;
+//     background-color: var(--accent-text-color);
+//   }
+// }
 .showcase-list {
   display: flex;
   flex-direction: row;
@@ -220,30 +225,46 @@ const projects = ref([
   position: relative;
   line-height: 1.2em;
   margin-bottom: 1.5em;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -0.3em;
+    left: 0;
+    height: 2px;
+    width: 8em;
+    background-color: var(--accent-text-color);
+  }
 }
-.showcase-list-item-subtitle::after {
-  content: "";
-  position: absolute;
-  bottom: -0.3em;
-  left: 0;
-  height: 2px;
-  width: 8em;
-  background-color: var(--accent-text-color);
-}
+// .showcase-list-item-subtitle::after {
+//   content: "";
+//   position: absolute;
+//   bottom: -0.3em;
+//   left: 0;
+//   height: 2px;
+//   width: 8em;
+//   background-color: var(--accent-text-color);
+// }
 .showcase-list-item-tech {
   display: flex;
   padding: 0;
   list-style: none;
   flex-wrap: wrap;
   margin: 1em 0 0 0;
+  li {
+    margin-top: 0.5em;
+    margin-right: 0.5em;
+    padding: 0.25em 0.5em;
+    background-color: var(--accent-text-color-light);
+    box-shadow: rgba(0, 0, 0, 0.35) 1px 1px 3px;
+  }
 }
-.showcase-list-item-tech li {
-  margin-top: 0.5em;
-  margin-right: 0.5em;
-  padding: 0.25em 0.5em;
-  background-color: var(--accent-text-color-light);
-  box-shadow: rgba(0, 0, 0, 0.35) 1px 1px 3px;
-}
+// .showcase-list-item-tech li {
+//   margin-top: 0.5em;
+//   margin-right: 0.5em;
+//   padding: 0.25em 0.5em;
+//   background-color: var(--accent-text-color-light);
+//   box-shadow: rgba(0, 0, 0, 0.35) 1px 1px 3px;
+// }
 .showcase-list-item-links {
   display: flex;
   margin: 1.5em 0 0 0;
@@ -289,13 +310,18 @@ const projects = ref([
     cursor: default;
     opacity: 0.3;
   }
+  &:hover,
+  &:focus {
+    box-shadow: rgba(0, 0, 0, 0.35) 3px 3px 5px;
+    transform: translate(2px, -2px);
+  }
 }
 
-.showcase-list-item-link:hover,
-.showcase-list-item-link:focus {
-  box-shadow: rgba(0, 0, 0, 0.35) 3px 3px 5px;
-  transform: translate(2px, -2px);
-}
+// .showcase-list-item-link:hover,
+// .showcase-list-item-link:focus {
+//   box-shadow: rgba(0, 0, 0, 0.35) 3px 3px 5px;
+//   transform: translate(2px, -2px);
+// }
 
 @media screen and (max-width: 370px) {
   .showcase-list-item-link {

@@ -2,13 +2,19 @@
   <section id="about">
     <div class="main-container">
       <div class="about-main">
-        <div class="section-header">
+        <!-- <div class="section-header">
           <img
             src="@/assets/icons/book.svg"
             alt=""
           >
           <h2>About Me</h2>
-        </div>
+        </div> -->
+        <SectionHeader
+          icon="../assets/icons/book.svg"
+          title="About Me"
+          alt="book icon"
+        />
+
         <!-- <div class="flex"> -->
         <!-- <img
             src="@/assets/images/portrait.jpg"
@@ -39,30 +45,30 @@
 .about-main {
   padding: 10vh 0rem;
 }
-.section-header {
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  img {
-    float: left;
-    width: 3rem;
-    height: 2rem;
-    filter: var(--accent-svg-color-filter);
-  }
-  h2 {
-    position: relative;
-    float: right;
-  }
-  h2::after {
-    content: "";
-    position: absolute;
-    bottom: 0.3rem;
-    left: 0;
-    height: 4px;
-    width: 7rem;
-    background-color: var(--accent-text-color);
-  }
-}
+// .section-header {
+//   margin-bottom: 1rem;
+//   display: flex;
+//   align-items: center;
+//   img {
+//     float: left;
+//     width: 3rem;
+//     height: 2rem;
+//     filter: var(--accent-svg-color-filter);
+//   }
+//   h2 {
+//     position: relative;
+//     float: right;
+//   }
+//   h2::after {
+//     content: "";
+//     position: absolute;
+//     bottom: 0.3rem;
+//     left: 0;
+//     height: 4px;
+//     width: 7rem;
+//     background-color: var(--accent-text-color);
+//   }
+// }
 .about-portrait {
   width: 100%;
   height: auto;

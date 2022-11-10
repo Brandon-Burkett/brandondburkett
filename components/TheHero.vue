@@ -30,7 +30,7 @@
             target="_blank"
           ><img
               src="@/assets/icons/file.svg"
-              alt=""
+              alt="file icon"
             >View Resume</a>
         </div>
       </div>
@@ -82,12 +82,12 @@
     width: 1.3em;
     height: 1.3em;
   }
-  .button-fill img {
-    filter: var(--white-svg-color-filter);
-  }
-  .button-outline img {
-    filter: var(--primary-svg-color-filter);
-  }
+  // .button-fill img {
+  //   filter: var(--white-svg-color-filter);
+  // }
+  // .button-outline img {
+  //   filter: var(--primary-svg-color-filter);
+  // }
   // .button-outline:hover img {
   //   filter: var(--accent-svg-color-filter);
   // }

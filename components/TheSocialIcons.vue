@@ -4,23 +4,26 @@
       <li class="social-icon-item"><a
           href="https://github.com/brandon-burkett"
           target="_blank"
+          aria-label="GitHub"
         ><img
             src="@/assets/icons/github.svg"
-            alt=""
+            alt="github icon"
           ></a></li>
       <li class="social-icon-item"><a
           href="https://linkedin.com/brandon-burkett"
           target="_blank"
+          aria-label="LinkedIn"
         ><img
             src="@/assets/icons/linkedin.svg"
-            alt=""
+            alt="linkedin icon"
           ></a></li>
       <li class="social-icon-item"><a
           href="mailto:brandondburkett@gmail.com"
           target="_blank"
+          aria-label="email address"
         ><img
             src="@/assets/icons/mail.svg"
-            alt=""
+            alt="mail icon"
           ></a></li>
     </ul>
   </div>
@@ -43,11 +46,15 @@
 .social-icon-item {
   padding: 0 1em 0 1em;
   filter: var(--primary-svg-color-filter);
+  &:hover {
+    cursor: pointer;
+    filter: var(--accent-svg-color-filter);
+  }
 }
-.social-icon-item:hover {
-  cursor: pointer;
-  filter: var(--accent-svg-color-filter);
-}
+// .social-icon-item:hover {
+//   cursor: pointer;
+//   filter: var(--accent-svg-color-filter);
+// }
 
 // @media screen and (min-width: 768px) {
 //   .social-icon-list {
