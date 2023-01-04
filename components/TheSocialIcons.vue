@@ -10,7 +10,7 @@
             alt="github icon"
           ></a></li>
       <li class="social-icon-item"><a
-          href="https://linkedin.com/brandon-burkett"
+          href="https://linkedin.com/in/brandon-burkett"
           target="_blank"
           aria-label="LinkedIn"
         ><img
