@@ -1,6 +1,6 @@
 <template>
   <div class="footer-container">
-    Made by Brandon Burkett &copy; 2022
+    Made by Brandon Burkett &copy; 2023
   </div>
 </template>
 
